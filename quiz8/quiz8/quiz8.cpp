@@ -3,17 +3,19 @@
 
 #include "stdafx.h"
 #include <iostream>
-#include "Point2d.h"
+#include "monster.h"
+#include <ctime>
+#include <cstdlib>
+
 
 int main()
 {
-	Point2d first;
-	Point2d second(3.0, 4.0);
-	first.print();
-	second.print();
-	//std::cout << "Distance between two points: " << first.distanceTo(second) << '\n';
-	std::cout << "Distance between two points: " << distanceFrom(first, second) << '\n';
+	srand(static_cast<unsigned int>(time(0))); // set initial seed value to system clock
+	rand(); // If using Visual Studio, discard first random value
 
-    return 0;
+	Monster m = MonsterGenerator::generateMonster();
+	m.print();
+
+
+	return 0;
 }
-
