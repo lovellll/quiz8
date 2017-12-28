@@ -31,7 +31,7 @@ Monster MonsterGenerator::generateMonster()
 	static int name;
 	static int roar;
 	static std::string s_names[6]{ "Alex1", "Alex2", "Alex3", "Alex4", "Alex5", "Alex6" };
-	std::string s_roars[6]{ "Hi1","Hi2","Hi3","Hi4","Hi5","Hi6" };
+	static std::string s_roars[6]{ "Hi1","Hi2","Hi3","Hi4","Hi5","Hi6" };
 	type = getRandomNumber(0, Monster::MonsterType::MAX_MONSTER_TYPES - 1);
 	hp = getRandomNumber(1, 100);
 	name = getRandomNumber(0, 5);
